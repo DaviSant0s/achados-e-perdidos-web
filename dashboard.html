@@ -15,25 +15,34 @@
 
     <link rel="stylesheet" href="./css/index.css" />
 
-    <title>Achados e Perdidos</title>
+    <title>dashboard</title>
   </head>
   <body class="bg-body-tertiary">
     <header class="border-bottom mb-4">
       <nav class="container navbar navbar-light bg-light navbar-expand-lg">
-        <div class="container-fluid">
-          <a class="navbar-brand fw-bold fs-3" href="#">ACHADOS E PERDIDOS</a>
-          <div>
-            <a href="login.html" class="btn btn-secondary">Login</a>
-            <a href="register.html" class="btn btn-outline-secondary"
-              >Cadastre-se</a
-            >
-          </div>
-        </div>
-      </nav>
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold fs-3" href="#">DASHBOARD</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center gap-3">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Achados e Perdidos</a>
+          </li>
+          <li class="nav-item">
+            <a href="login.html" class="btn btn-outline-danger">Sair</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
     </header>
     <main class="w-100">
       <div class="container py-4">
-        <h2 class="fs-3 mb-4">Itens Perdidos</h2>
+        <h2 class="fs-3 mb-4">Meus Itens Perdidos</h2>
         <div class="row row-cols-2 row-cols-md-4 g-4">
           <div class="col">
             <div class="card shadow-lg">
