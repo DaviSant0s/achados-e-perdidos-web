@@ -18,27 +18,39 @@
     <title>dashboard</title>
   </head>
   <body class="bg-body-tertiary">
+    <script src="./js/dashboard.js"></script>
+
     <header class="border-bottom mb-4">
       <nav class="container navbar navbar-light bg-light navbar-expand-lg">
-    <div class="container-fluid">
-      <a class="navbar-brand fw-bold fs-3" href="#">DASHBOARD</a>
+        <div class="container-fluid">
+          <a class="navbar-brand fw-bold fs-3" href="#">DASHBOARD</a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav align-items-center gap-3">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Achados e Perdidos</a>
-          </li>
-          <li class="nav-item">
-            <a href="login.html" class="btn btn-outline-danger">Sair</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav align-items-center gap-3">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Achados e Perdidos</a>
+              </li>
+              <li class="nav-item">
+                <button onclick=logout() type="button" class="btn btn-outline-danger">
+                  Sair
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
     <main class="w-100">
       <div class="container py-4">
