@@ -57,13 +57,11 @@
 
     <main class="w-100">
       <div class="container py-4">
-
         <div class="d-flex justify-content-between align-items-center mb-3">
           <h2 class="fs-3 m-0">Meus Itens Perdidos</h2>
-          <button class="btn btn-primary" onclick="abrirFormularioCriar()">
+          <button class="btn btn-primary" onclick="criarObjeto()">
             Criar Novo
           </button>
-
         </div>
 
         <div class="table-responsive">
@@ -88,11 +86,11 @@
     </main>
 
     <!-- Modal -->
-    <div class="modal fade" id="detalhesModal" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="editarModal" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog">
-        <div class="modal-content">
+        <form id="formEditarObjeto" class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Detalhes do Item</h5>
+            <h5 class="modal-title">Editar Objeto</h5>
             <button
               type="button"
               class="btn-close"
@@ -100,15 +98,84 @@
             ></button>
           </div>
           <div class="modal-body">
-            <div id="detalhesDescricao">
-              <!-- os detalhes ficam aqui -->
+            <input type="hidden" id="editarObjetoId" />
+
+            <div class="mb-3">
+              <label for="editarNome" class="form-label">Nome</label>
+              <input
+                type="text"
+                class="form-control"
+                id="editarNome"
+                required
+              />
             </div>
-            <hr />
-            <div id="detalhesImagens" class="d-flex flex-wrap gap-2">
-              <!-- imagens extras aqui -->
+
+            <div class="mb-3">
+              <label for="editarDescricao" class="form-label">Descrição</label>
+              <textarea
+                class="form-control"
+                id="editarDescricao"
+                rows="3"
+                required
+              ></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label for="editarCategoria" class="form-label">Categoria</label>
+              <input
+                type="text"
+                class="form-control"
+                id="editarCategoria"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="editarLocal" class="form-label">Local da Perda</label>
+              <input
+                type="text"
+                class="form-control"
+                id="editarLocal"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="editarData" class="form-label">Data da Perda</label>
+              <input
+                type="date"
+                class="form-control"
+                id="editarData"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="editarNovasImagens" class="form-label"
+                >Inserir Imagens</label
+              >
+              <input
+                type="file"
+                class="form-control"
+                id="editarNovasImagens"
+                multiple
+              />
             </div>
           </div>
-        </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancelar
+            </button>
+            <button type="submit" class="btn btn-primary">
+              Salvar Alterações
+            </button>
+          </div>
+        </form>
       </div>
     </div>
 
