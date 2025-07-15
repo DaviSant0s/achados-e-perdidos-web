@@ -13,11 +13,22 @@ let objetosCarregados = [];
 
 async function buscarObjetos() {
   try {
-    const response = await fetch('http://localhost:3000/api/object/getObjects');
+    
+    const response = await fetch('http://localhost:3000/api/object/getUserObjects', {
+      headers: {
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json'
+      }
+    });
+
     if (!response.ok) throw new Error('Erro ao buscar objetos');
+
     const { objects } = await response.json();
+
     return objects;
+
   } catch (error) {
+
     console.error(error);
     alert(error.message);
     return [];
