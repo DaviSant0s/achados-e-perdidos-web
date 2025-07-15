@@ -36,17 +36,23 @@ function renderizarObjetos(objetos) {
     tabela.innerHTML += `
       <tr>
         <td><img src="${primeiraImagem}" alt="${obj.name}" style="height: 60px; object-fit: cover;" class="rounded shadow-sm" /></td>
-        <td>${obj.name}</td>
-        <td>${obj.description}</td>
-        <td>${obj.category}</td>
-        <td>${obj.location_of_loss}</td>
-        <td>${formatarData(obj.date_of_loss)}</td>
-        <td><button onClick='configurarModal()' class="btn btn-primary btn-detalhes" data-id="${obj.id}" data-bs-toggle="modal" data-bs-target="#detalhesModal">Mais detalhes</button></td>
+          <td>${obj.name}</td>
+          <td>${obj.description}</td>
+          <td>${obj.category}</td>
+          <td>${obj.location_of_loss}</td>
+          <td>${formatarData(obj.date_of_loss)}</td>
+          <td>
+            
+            <button class="btn btn-sm btn-warning me-1" onclick="editarItem()">Editar</button>
+            <button class="btn btn-sm btn-danger" onclick="excluirItem()">Excluir</button>
+          </td>
       </tr>`;
   });
 
   configurarModal();
 }
+
+// <button onClick='configurarModal()' class="btn btn-primary btn-detalhes" data-id="${obj.id}" data-bs-toggle="modal" data-bs-target="#detalhesModal">Mais detalhes</button>
 
 function formatarData(dataISO) {
   const [ano, mes, dia] = dataISO.split('-');
